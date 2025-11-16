@@ -1,0 +1,181 @@
+﻿@model IEnumerable<PROG6212_POE_P3.Models.Claim>
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6C63FF, #00C6FF);
+    }
+
+    .dashboard-container {
+        background: rgba(255, 255, 255, 0.97);
+        padding: 50px 40px;
+        border-radius: 25px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 1000px;
+        width: 90%;
+        margin: 50px auto;
+        animation: fadeIn 1.2s ease-in-out;
+        flex: 1;
+    }
+
+        .dashboard-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+    .dashboard-links {
+        margin-bottom: 30px;
+    }
+
+        .dashboard-links a.btn {
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin: 0 10px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+    .btn-submit {
+        background: #007bff;
+    }
+
+        .btn-submit:hover {
+            background: #0056b3;
+        }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        margin-top: 20px;
+    }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        table th {
+            background-color: #6C63FF;
+            color: white;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #eef5ff;
+        }
+
+    .status-Pending {
+        color: #ff9800;
+        font-weight: 600;
+    }
+
+    .status-Verified {
+        color: #17a2b8;
+        font-weight: 600;
+    }
+
+    .status-Approved {
+        color: #28a745;
+        font-weight: 600;
+    }
+
+    .status-Rejected {
+        color: #dc3545;
+        font-weight: 600;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 25px;
+        font-weight: 600;
+        color: #6C63FF;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="dashboard-container">
+    <h2>Dashboard - Claims</h2>
+
+    <div class="dashboard-links">
+        <a class="btn btn-submit" href="@Url.Action("ClaimForm", "Home")">Submit New Claim</a>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Lecturer Name</th>
+                    <th>Date Submitted</th>
+                    <th>Hours Worked</th>
+                    <th>Rate (R)</th>
+                    <th>Amount (R)</th>
+                    <th>Status</th>
+                    <th>Document</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var claim in Model)
+                {
+                    <tr>
+                        <td>@claim.Id</td>
+                        <td>@claim.LecturerName</td>
+                        <td>@claim.DateSubmitted.ToString("yyyy-MM-dd")</td>
+                        <td>@claim.HoursWorked</td>
+                        <td>@claim.HourlyRate.ToString("C")</td>
+                        <td>@claim.TotalPayment.ToString("C")</td>
+                        <td class="status-@claim.Status">@claim.Status</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(claim.UploadedFileName))
+                            {
+                                var fileUrl = Url.Content("~/uploads/" + claim.UploadedFileName);
+                                if (claim.UploadedFileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <a href="@fileUrl" target="_blank">View PDF</a>
+                                }
+                                else
+                                {
+                                    <img src="@fileUrl" alt="Uploaded file" width="100" style="border-radius:8px;" />
+                                }
+                            }
+                            else
+                            {
+                                <span>No File</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No claims submitted yet. Click “Submit New Claim” to get started.</p>
+    }
+
+    <a class="back-link" href="@Url.Action("MainMenu", "Home")">← Back to Main Menu</a>
+</div>

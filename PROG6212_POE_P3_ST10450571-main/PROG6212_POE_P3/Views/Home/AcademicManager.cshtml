@@ -1,0 +1,247 @@
+﻿@using PROG6212_POE_P3.Models
+@model IEnumerable<PROG6212_POE_P3.Models.Claim>
+
+@{
+    ViewData["Title"] = "Academic Manager: Claims Awaiting Approval"; // SLIGHTLY ADJUSTED TITLE FOR CLARITY
+    Layout = "_Layout";
+}
+
+<style>
+
+    /* ------------------------------------------- */
+
+    /* --- STYLES COPIED FROM COORDINATOR VIEW --- */
+
+    /* ------------------------------------------- */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6C63FF, #00C6FF);
+    }
+
+    .dashboard-container {
+        background: rgba(255, 255, 255, 0.97);
+        padding: 50px 40px;
+        border-radius: 25px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 1200px;
+        width: 90%;
+        margin: 50px auto;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+        .dashboard-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        table th {
+            background-color: #6C63FF;
+            color: white;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #eef5ff;
+        }
+
+    textarea {
+        width: 100%;
+        min-height: 60px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 13px;
+        resize: none;
+    }
+
+    iframe, img.document-preview {
+        max-width: 200px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        object-fit: contain;
+    }
+
+    .action-btn {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 2px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        color: white;
+    }
+
+    .btn-approve {
+        background-color: #28a745;
+    }
+
+        .btn-approve:hover {
+            background-color: #218838;
+        }
+
+
+    /* Added style for the intermediate 'Verified' status */
+    .status-verified {
+        color: #007bff;
+        font-weight: 600;
+    }
+
+    .btn-reject {
+        background-color: #dc3545;
+    }
+
+        .btn-reject:hover {
+            background-color: #c82333;
+        }
+
+    .status-approved {
+        color: #28a745;
+        font-weight: 600;
+    }
+
+    .status-rejected {
+        color: #dc3545;
+        font-weight: 600;
+    }
+
+    .status-pending {
+        color: #ff9800;
+        font-weight: 600;
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<div class="dashboard-container">
+    <h2>Academic Manager: Claims Awaiting Approval</h2> @* UPDATED HEADING *@
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            There are currently no claims pending Academic Manager approval.
+        </div>
+    }
+    else
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Lecturer Name</th>
+                    <th>Date Submitted</th>
+                    <th>Hours Worked</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Supporting Document</th>
+                    <th>Coordinator Remarks</th> @* LABEL CLARIFIED *@
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var claim in Model)
+                {
+                    var filePath = $"/uploads/{claim.UploadedFileName}";
+
+                    <tr>
+                        <td>@claim.Id</td>
+                        <td>@claim.LecturerName</td>
+                        <td>@claim.DateSubmitted.ToString("yyyy-MM-dd")</td>
+                        <td>@claim.HoursWorked</td>
+                        <td>R@((claim.HoursWorked * claim.HourlyRate).ToString("N2"))</td>
+
+                        @* MODIFIED: Display "Pending (Manager Review)" if status is Verified, otherwise display the actual status. *@
+                        <td class="status-@claim.Status.ToString().ToLower()">
+                            @if (claim.Status.ToString() == "Verified")
+                            {
+                                @:Pending (Manager Review)
+                            }
+                            else
+                            {
+                                @claim.Status
+                            }
+                        </td>
+
+                        <td>
+                            @if (!string.IsNullOrEmpty(claim.UploadedFileName))
+                            {
+                                @* Ensure the secure file serving logic is implemented in the controller *@
+                                @if (claim.UploadedFileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <a href="@filePath" target="_blank">View PDF</a>
+                                }
+                                else
+                                {
+                                    <a href="@filePath" target="_blank">View File</a>
+                                }
+                            }
+                            else
+                            {
+                                <span>No File</span>
+                            }
+                        </td>
+                        <td>
+                            <textarea readonly>@claim.CoordinatorRemarks</textarea>
+                        </td>
+                        <td>
+                            @* Action buttons are only shown if the claim has been VERIFIED by the Coordinator (or whatever status is used for second-stage approval) *@
+                            @if (claim.Status.ToString() == "Verified") @* CRITICAL CHANGE: Manager acts on Verified claims, not Pending *@
+                            {
+                                <form asp-action="UpdateStatus" asp-controller="Home" method="post">
+                                    <input type="hidden" name="id" value="@claim.Id" />
+                                    <textarea name="remarks" placeholder="Optional remarks..."></textarea>
+                                    <br />
+                                    @* BUTTONS ARE CORRECTLY 'Approve' and 'Reject' for the Manager role *@
+                                    <button type="submit" name="status" value="Approved" class="action-btn btn-approve" onclick="return confirm('Are you sure you want to approve this claim for payment?');">Approve</button>
+                                    <button type="submit" name="status" value="Rejected" class="action-btn btn-reject">Reject</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <span>No actions available</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    <a class="back-link" href="@Url.Action("MainMenu", "Home")">← Back to Main Menu</a>
+</div>

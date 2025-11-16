@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Submit Claim";
+}
+<div class="container">
+    <h2>Submit Monthly Claim</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="small" style="color:green; margin-bottom:10px;">@TempData["Success"]</div>
+    }
+
+    <form asp-controller="Claims" asp-action="Create" method="post" enctype="multipart/form-data">
+        <label>Lecturer Name</label>
+        <input type="text" name="lecturerName" required />
+
+        <label>Hours Worked</label>
+        <input type="number" name="hoursWorked" min="1" required />
+
+        <label>Hourly Rate</label>
+        <input type="number" name="hourlyRate" min="0" step="0.01" required />
+
+        <label>Supporting Document (.pdf, .docx, .xlsx) — max 5MB</label>
+        <input type="file" name="uploadedFile" id="fileInput" accept=".pdf,.docx,.xlsx" />
+
+        <span id="fileName" class="file-italic"></span>
+
+        <label>Additional Notes</label>
+        <textarea name="notes" style="min-height:80px;"></textarea>
+
+        <button type="submit" class="btn btn-primary">Submit Claim</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('fileInput')?.addEventListener('change', function(e) {
+          var f = e.target.files[0];
+          document.getElementById('fileName').textContent = f ? "Selected file: " + f.name : "";
+          // optional client-side size/type checks can be added here
+        });
+    </script>
+}

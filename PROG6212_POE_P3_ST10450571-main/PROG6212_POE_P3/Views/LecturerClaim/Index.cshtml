@@ -1,0 +1,201 @@
+﻿@model IEnumerable<PROG6212_POE_P3.Models.Claim>
+@{
+    ViewBag.Title = "Coordinator & Manager Dashboard";
+}
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        margin-top: 15px;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #6C63FF;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover {
+        background-color: #eef5ff;
+    }
+
+    .status-Pending {
+        color: #ff9800;
+        font-weight: 600;
+    }
+
+    .status-Verified {
+        color: #17a2b8;
+        font-weight: 600;
+    }
+
+    .status-Approved {
+        color: #28a745;
+        font-weight: 600;
+    }
+
+    .status-Rejected {
+        color: #dc3545;
+        font-weight: 600;
+    }
+
+    .btn-approve {
+        background-color: #28a745;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 2px;
+    }
+
+    .btn-reject {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 2px;
+    }
+
+    .remarks-box {
+        width: 100%;
+        min-height: 50px;
+        resize: vertical;
+    }
+
+    .doc-iframe {
+        width: 100%;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="container">
+    <h2>Coordinator & Manager Dashboard – Review Claims</h2>
+
+    <div style="text-align:right; margin-bottom:12px;">
+        <label>Sort By:</label>
+        <select id="sortSelect">
+            <option value="date">Date Submitted</option>
+            <option value="status">Status</option>
+            <option value="amount">Amount</option>
+        </select>
+    </div>
+
+    <table id="claimsTable">
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Lecturer</th>
+                <th>Date Submitted</th>
+                <th>Hours</th>
+                <th>Rate</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Document</th>
+                <th>Remarks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr data-id="@c.Id" data-status="@c.Status" data-amount="@c.TotalPayment" data-date="@c.DateSubmitted">
+                    <td>@c.Id</td>
+                    <td>@c.LecturerName</td>
+                    <td>@c.DateSubmitted.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@c.HoursWorked</td>
+                    <td>@c.HourlyRate.ToString("C")</td>
+                    <td>@c.TotalPayment.ToString("C")</td>
+                    <td class="status-@c.Status">@c.Status</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(c.UploadedFileName))
+                        {
+                            var fileUrl = Url.Content("~/uploads/" + c.UploadedFileName);
+                            <button class="btn" onclick="showPreview('@fileUrl')">Preview</button>
+                        }
+                        else
+                        {
+
+                            <span class="small">No file</span>
+                        }
+                    </td>
+                    <td><textarea class="remarks-box" id="remarks-@c.Id">@c.CoordinatorRemarks</textarea></td>
+                    <td>
+                        <button class="btn-approve" onclick="updateStatus(@c.Id, 'Approved')">Approve</button>
+                        <button class="btn-reject" onclick="updateStatus(@c.Id, 'Rejected')">Reject</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div id="previewArea">
+        <h3>Document Viewer</h3>
+        <iframe id="docFrame" class="doc-iframe" src=""></iframe>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        async function updateStatus(id, status) {
+            const remarks = document.getElementById('remarks-' + id).value || '';
+            const resp = await fetch('/Home/UpdateStatus', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id, status: status, remarks: remarks })
+            });
+            if (!resp.ok) { alert('Failed to update claim'); return; }
+
+            location.reload(); // simple reload to refresh table and status
+        }
+
+        function showPreview(fileUrl) {
+            document.getElementById('docFrame').src = fileUrl;
+            window.scrollTo({ top: document.getElementById('docFrame').offsetTop - 40, behavior: 'smooth' });
+        }
+
+        document.getElementById('sortSelect')?.addEventListener('change', function() {
+            const tbody = document.querySelector('#claimsTable tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const val = this.value;
+            rows.sort((a,b) => {
+                if(val === 'date') return new Date(b.dataset.date) - new Date(a.dataset.date);
+                if(val === 'amount') return parseFloat(b.dataset.amount) - parseFloat(a.dataset.amount);
+                if(val === 'status') return a.dataset.status.localeCompare(b.dataset.status);
+                return 0;
+            });
+            rows.forEach(r => tbody.appendChild(r));
+        });
+    </script>
+}

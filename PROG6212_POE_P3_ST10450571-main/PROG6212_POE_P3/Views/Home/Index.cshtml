@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6C63FF, #00C6FF);
+    }
+
+    .home-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+    }
+
+    .home-container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 60px 50px;
+        border-radius: 25px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 700px;
+        width: 90%;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .home-container h1 {
+        font-size: 3rem;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    .home-container p {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+        color: #555;
+    }
+
+    .home-container a.btn {
+        font-size: 1.4rem;
+        padding: 15px 40px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        background: #6C63FF;
+        border: none;
+        color: white;
+        box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+        margin: 10px;
+        display: inline-block;
+    }
+
+        .home-container a.btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.5);
+            background: #574fd6;
+            text-decoration: none;
+            color: white;
+        }
+
+    .learn-link {
+        color: #6C63FF;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .learn-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="home-wrapper">
+    <div class="home-container">
+        <h1 class="display-4">Welcome!</h1>
+        <p>Would you like to log a claim.</p>
+
+        <!-- Buttons -->
+        <a class="btn btn-lg" href="@Url.Action("Login", "Home")">Login</a>
+    </div>
+</div>

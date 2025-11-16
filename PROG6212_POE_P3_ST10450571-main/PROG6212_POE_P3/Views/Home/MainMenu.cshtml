@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Main Menu";
+    Layout = "_Layout";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6C63FF, #00C6FF);
+    }
+
+    .menu-container {
+        background: rgba(255, 255, 255, 0.97);
+        padding: 50px 40px;
+        border-radius: 25px;
+        max-width: 600px;
+        margin: 100px auto;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        color: #333;
+        font-size: 2.5rem;
+    }
+
+    a.btn {
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+        padding: 15px 0;
+        border-radius: 50px;
+        background-color: #6C63FF;
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        a.btn:hover {
+            transform: translateY(-3px);
+            background-color: #574fd6;
+            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.5);
+        }
+</style>
+
+<div class="menu-container">
+    <h2>Main Menu</h2>
+
+    <a class="btn" href="@Url.Action("Dashboard", "Home")">View Claims Dashboard</a>
+    <a class="btn" href="@Url.Action("ClaimForm", "Home")">Submit New Claim</a>
+    <a class="btn" href="@Url.Action("Coordinator", "Home")">Coordinator Review</a>
+    <a class="btn" href="@Url.Action("AcademicManager", "Home")">Manager Approval</a>
+    <a class="btn" href="@Url.Action("HRMain", "Home")">User Management (HR/Admin)</a>
+</div>
