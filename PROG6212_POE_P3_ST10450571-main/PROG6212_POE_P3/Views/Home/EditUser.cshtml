@@ -1,0 +1,59 @@
+﻿@model PROG6212_POE_P3.Models.User
+
+@{
+    ViewData["Title"] = "Edit User";
+    Layout = "_Layout";
+}
+
+<div class="hr-container">
+    <h2>Edit User</h2>
+
+    <form asp-action="EditUser" method="post">
+
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label>Username</label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Role</label>
+            <select asp-for="Role" class="form-control">
+                <option>Lecturer</option>
+                <option>Coordinator</option>
+                <option>Manager</option>
+                <option>HR</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Name (Display Name)</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Hourly Rate</label>
+            <input asp-for="HourlyRate" class="form-control" />
+            <span asp-validation-for="HourlyRate" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-edit">Save Changes</button>
+        <a href="@Url.Action("HRMain", "Home")" class="btn btn-delete">Cancel</a>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

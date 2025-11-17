@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using System.Threading.Tasks;
-using PROG6212_POE_P2.Models;
-using PROG6212_POE_P2.Services;
+using PROG6212_POE_P3.Models;
+using PROG6212_POE_P3.Services;
 using System.Linq;
 
 namespace PROG6212_POE_P3.Controllers

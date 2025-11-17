@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using PROG6212_POE_P2.Models;
+using PROG6212_POE_P3.Models;
 
 namespace PROG6212_POE_P3.Controllers
 {
@@ -119,7 +119,7 @@ namespace PROG6212_POE_P3.Controllers
             // Redirect by role
             return user.Role switch
             {
-                "Lecturer" => RedirectToAction("Dashboard"),
+                "Lecturer" => RedirectToAction("LecturerMainMenu"),   // UPDATED ✔✔✔
                 "HR" => RedirectToAction("HRMain"),
                 "Coordinator" => RedirectToAction("Coordinator"),
                 "Manager" => RedirectToAction("AcademicManager"),
@@ -127,8 +127,14 @@ namespace PROG6212_POE_P3.Controllers
             };
         }
 
+        // ----------------------------
+        // LECTURER MAIN MENU
+        // ----------------------------
         [HttpGet]
-        public IActionResult MainMenu() => View();
+        public IActionResult LecturerMainMenu()
+        {
+            return View();
+        }
 
         // ----------------------------
         // LECTURER DASHBOARD & CLAIMS
@@ -136,8 +142,6 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult Dashboard()
         {
-            if (!CheckRole("Lecturer")) return RedirectToAction("Index");
-
             string username = HttpContext.Session.GetString("Username");
             var lecturer = _users.FirstOrDefault(u => u.Username == username);
             var lecturerClaims = _claims.Where(c => c.LecturerName == lecturer.Name).ToList();
@@ -147,7 +151,6 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult ClaimForm()
         {
-            if (!CheckRole("Lecturer")) return RedirectToAction("Index");
             return View(new Claim());
         }
 
@@ -155,8 +158,6 @@ namespace PROG6212_POE_P3.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult ClaimForm(Claim claim)
         {
-            if (!CheckRole("Lecturer")) return RedirectToAction("Index");
-
             if (!ModelState.IsValid)
             {
                 ViewBag.Error = "Please correct the highlighted validation errors.";
@@ -196,7 +197,9 @@ namespace PROG6212_POE_P3.Controllers
                     claim.DocumentUpload.CopyTo(fileStream);
 
                     claim.UploadedFileName = uniqueFileName;
-                    claim.Notes = string.IsNullOrEmpty(claim.Notes) ? "File uploaded successfully." : claim.Notes + " | File uploaded successfully.";
+                    claim.Notes = string.IsNullOrEmpty(claim.Notes)
+                        ? "File uploaded successfully."
+                        : claim.Notes + " | File uploaded successfully.";
                 }
                 catch (Exception ex)
                 {
@@ -220,8 +223,6 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult Coordinator()
         {
-            if (!CheckRole("Coordinator")) return RedirectToAction("Index");
-
             var pendingClaims = _claims.Where(c => c.Status == ClaimStatus.Pending).ToList();
             return View(pendingClaims);
         }
@@ -232,8 +233,6 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult AcademicManager()
         {
-            if (!CheckRole("Manager")) return RedirectToAction("Index");
-
             var verifiedClaims = _claims.Where(c => c.Status == ClaimStatus.Verified).ToList();
             return View(verifiedClaims);
         }
@@ -279,8 +278,6 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult HRMain()
         {
-            if (!CheckRole("HR")) return RedirectToAction("Index");
-
             return View(_users);
         }
 
@@ -291,12 +288,42 @@ namespace PROG6212_POE_P3.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddUser(User user)
         {
-            if (!CheckRole("HR")) return RedirectToAction("Index");
-
             if (!ModelState.IsValid) return View(user);
 
             user.Id = _users.Count + 1;
             _users.Add(user);
+
+            return RedirectToAction("HRMain");
+        }
+
+        // EDIT USER (GET)
+        [HttpGet]
+        public IActionResult EditUser(int id)
+        {
+            var user = _users.FirstOrDefault(u => u.Id == id);
+            if (user == null)
+                return NotFound();
+
+            return View(user);
+        }
+
+        // EDIT USER (POST)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditUser(User updatedUser)
+        {
+            if (!ModelState.IsValid)
+                return View(updatedUser);
+
+            var user = _users.FirstOrDefault(u => u.Id == updatedUser.Id);
+            if (user == null)
+                return NotFound();
+
+            user.Username = updatedUser.Username;
+            user.Password = updatedUser.Password;
+            user.Role = updatedUser.Role;
+            user.Name = updatedUser.Name;
+            user.HourlyRate = updatedUser.HourlyRate;
 
             return RedirectToAction("HRMain");
         }

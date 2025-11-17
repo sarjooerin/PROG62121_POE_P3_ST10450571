@@ -70,3 +70,27 @@
         button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(108, 99, 255, 0.5);
+        }
+</style>
+
+<div class="adduser-container">
+    <h2>Add New User</h2>
+
+    <form asp-action="AddUser" method="post">
+        <label asp-for="Username">Username</label>
+        <input asp-for="Username" type="text" />
+
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" type="password" />
+
+        <label asp-for="Role">Select Role</label>
+        <select asp-for="Role">
+            <option value="">-- Select Role --</option>
+            <option value="HR">HR</option>
+            <option value="Lecturer">Lecturer</option>
+            <option value="Student">Student</option>
+        </select>
+
+        <button type="submit">Add User</button>
+    </form>
+</div>
