@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Main Menu";
     Layout = "_Layout";
+
+    var role = Context.Session.GetString("Role");
 }
 
 <style>
@@ -44,14 +46,46 @@
             background-color: #574fd6;
             box-shadow: 0 10px 25px rgba(108, 99, 255, 0.5);
         }
+
+    a.logout {
+        display: block;
+        margin-top: 30px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+    }
 </style>
 
 <div class="menu-container">
     <h2>Main Menu</h2>
 
-    <a class="btn" href="@Url.Action("Dashboard", "Home")">View Claims Dashboard</a>
-    <a class="btn" href="@Url.Action("ClaimForm", "Home")">Submit New Claim</a>
-    <a class="btn" href="@Url.Action("Coordinator", "Home")">Coordinator Review</a>
-    <a class="btn" href="@Url.Action("AcademicManager", "Home")">Manager Approval</a>
-    <a class="btn" href="@Url.Action("HRMain", "Home")">User Management (HR/Admin)</a>
+    @* Lecturer: Dashboard + ClaimForm *@
+    @if (role == "Lecturer")
+    {
+        <a class="btn" href="@Url.Action("Dashboard", "Home")">View Claims Dashboard</a>
+        <a class="btn" href="@Url.Action("ClaimForm", "Home")">Submit New Claim</a>
+    }
+
+    @* Coordinator/Admin1: Coordinator + Dashboard *@
+    @if (role == "Admin1")
+    {
+        <a class="btn" href="@Url.Action("Coordinator", "Home")">Coordinator Review</a>
+        <a class="btn" href="@Url.Action("Dashboard", "Home")">View Claims Dashboard</a>
+    }
+
+    @* AcademicManager/Admin2: Dashboard + Manager Pages *@
+    @if (role == "Admin2")
+    {
+        <a class="btn" href="@Url.Action("AcademicManager", "Home")">Manager Approval</a>
+        <a class="btn" href="@Url.Action("Dashboard", "Home")">View Claims Dashboard</a>
+    }
+
+    @* HR: HRMain + Dashboard *@
+    @if (role == "HR")
+    {
+        <a class="btn" href="@Url.Action("HRMain", "Home")">User Management (HR/Admin)</a>
+        <a class="btn" href="@Url.Action("Dashboard", "Home")">View Claims Dashboard</a>
+    }
+
+    <a href="@Url.Action("Logout", "Home")" class="logout">← Logout</a>
 </div>

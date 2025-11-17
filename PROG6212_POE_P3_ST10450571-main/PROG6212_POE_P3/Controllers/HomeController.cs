@@ -22,61 +22,20 @@ namespace PROG6212_POE_P3.Controllers
         // --- In-memory users list ---
         private static List<User> _users = new List<User>()
         {
-            new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", Name="Lec 1", HourlyRate=150 },
-            new User { Id = 2, Username = "hr1", Password = "admin123", Role = "HR", Name="HR Admin", HourlyRate=0 },
-            new User { Id = 3, Username = "coordinator1", Password = "coord123", Role = "Coordinator", Name="Coord 1", HourlyRate=0 },
-            new User { Id = 4, Username = "manager1", Password = "manager123", Role = "Manager", Name="Manager 1", HourlyRate=0 },
+            new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", Name = "Lec 1", HourlyRate = 150 },
+            new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", Name = "HR", HourlyRate = 0 },
+            new User { Id = 3, Username = "admin1", Password = "coord123", Role = "Admin1", Name = "Coord 1", HourlyRate = 0 }, // Coordinator/Admin1
+            new User { Id = 4, Username = "admin2", Password = "manager123", Role = "Admin2", Name = "Manager 1", HourlyRate = 0 } // Manager/Admin2
         };
 
-        // --- Dummy claims for testing ---
         static HomeController()
         {
             if (!_claims.Any())
             {
-                _claims.Add(new Claim
-                {
-                    Id = 1,
-                    LecturerName = "Lec 1",
-                    DateSubmitted = DateTime.Now.AddDays(-5),
-                    HoursWorked = 10,
-                    HourlyRate = 150.00m,
-                    Status = ClaimStatus.Pending,
-                    UploadedFileName = "doc1.pdf",
-                    CoordinatorRemarks = ""
-                });
-                _claims.Add(new Claim
-                {
-                    Id = 2,
-                    LecturerName = "Lec 2",
-                    DateSubmitted = DateTime.Now.AddDays(-4),
-                    HoursWorked = 25,
-                    HourlyRate = 180.00m,
-                    Status = ClaimStatus.Verified,
-                    UploadedFileName = "doc2.docx",
-                    CoordinatorRemarks = "Coordinator: Verified hours and document."
-                });
-                _claims.Add(new Claim
-                {
-                    Id = 3,
-                    LecturerName = "Lec 3",
-                    DateSubmitted = DateTime.Now.AddDays(-3),
-                    HoursWorked = 5,
-                    HourlyRate = 100.00m,
-                    Status = ClaimStatus.Approved,
-                    UploadedFileName = "doc3.pdf",
-                    CoordinatorRemarks = "Coordinator: Verified. Manager: Final Approved."
-                });
-                _claims.Add(new Claim
-                {
-                    Id = 4,
-                    LecturerName = "Lec 4",
-                    DateSubmitted = DateTime.Now.AddDays(-2),
-                    HoursWorked = 30,
-                    HourlyRate = 200.00m,
-                    Status = ClaimStatus.Rejected,
-                    UploadedFileName = "doc4.pdf",
-                    CoordinatorRemarks = "Coordinator: Invalid hours."
-                });
+                _claims.Add(new Claim { Id = 1, LecturerName = "Lec 1", DateSubmitted = DateTime.Now.AddDays(-5), HoursWorked = 10, HourlyRate = 150.00m, Status = ClaimStatus.Pending, UploadedFileName = "doc1.pdf", CoordinatorRemarks = "" });
+                _claims.Add(new Claim { Id = 2, LecturerName = "Lec 2", DateSubmitted = DateTime.Now.AddDays(-4), HoursWorked = 25, HourlyRate = 180.00m, Status = ClaimStatus.Verified, UploadedFileName = "doc2.docx", CoordinatorRemarks = "Coordinator: Verified hours and document." });
+                _claims.Add(new Claim { Id = 3, LecturerName = "Lec 3", DateSubmitted = DateTime.Now.AddDays(-3), HoursWorked = 5, HourlyRate = 100.00m, Status = ClaimStatus.Approved, UploadedFileName = "doc3.pdf", CoordinatorRemarks = "Coordinator: Verified. Manager: Final Approved." });
+                _claims.Add(new Claim { Id = 4, LecturerName = "Lec 4", DateSubmitted = DateTime.Now.AddDays(-2), HoursWorked = 30, HourlyRate = 200.00m, Status = ClaimStatus.Rejected, UploadedFileName = "doc4.pdf", CoordinatorRemarks = "Coordinator: Invalid hours." });
             }
         }
 
@@ -115,34 +74,51 @@ namespace PROG6212_POE_P3.Controllers
             // Store user session
             HttpContext.Session.SetString("Username", user.Username);
             HttpContext.Session.SetString("Role", user.Role);
+            HttpContext.Session.SetString("Name", user.Name);
 
-            // Redirect by role
-            return user.Role switch
-            {
-                "Lecturer" => RedirectToAction("LecturerMainMenu"),   // UPDATED ✔✔✔
-                "HR" => RedirectToAction("HRMain"),
-                "Coordinator" => RedirectToAction("Coordinator"),
-                "Manager" => RedirectToAction("AcademicManager"),
-                _ => RedirectToAction("Index")
-            };
+            return RedirectToAction("MainMenu");
         }
 
         // ----------------------------
-        // LECTURER MAIN MENU
+        // MAIN MENU
         // ----------------------------
         [HttpGet]
-        public IActionResult LecturerMainMenu()
+        public IActionResult MainMenu()
         {
+            var username = HttpContext.Session.GetString("Username");
+            if (string.IsNullOrEmpty(username))
+                return RedirectToAction("Login");
+
+            ViewBag.Username = username;
+            ViewBag.Role = HttpContext.Session.GetString("Role");
+            ViewBag.Error = TempData["Error"];
             return View();
         }
 
         // ----------------------------
-        // LECTURER DASHBOARD & CLAIMS
+        // ROLE CHECK HELPER
+        // ----------------------------
+        private IActionResult AuthorizeRole(params string[] roles)
+        {
+            var userRole = HttpContext.Session.GetString("Role");
+            if (string.IsNullOrEmpty(userRole) || !roles.Contains(userRole))
+            {
+                TempData["Error"] = "You do not have access to this page.";
+                return RedirectToAction("MainMenu");
+            }
+            return null; // access granted
+        }
+
+        // ----------------------------
+        // DASHBOARD & CLAIMS
         // ----------------------------
         [HttpGet]
         public IActionResult Dashboard()
         {
-            string username = HttpContext.Session.GetString("Username");
+            var redirect = AuthorizeRole("Lecturer", "HR", "Admin1", "Admin2");
+            if (redirect != null) return redirect;
+
+            var username = HttpContext.Session.GetString("Username");
             var lecturer = _users.FirstOrDefault(u => u.Username == username);
             var lecturerClaims = _claims.Where(c => c.LecturerName == lecturer.Name).ToList();
             return View(lecturerClaims);
@@ -151,6 +127,9 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult ClaimForm()
         {
+            var redirect = AuthorizeRole("Lecturer");
+            if (redirect != null) return redirect;
+
             return View(new Claim());
         }
 
@@ -158,17 +137,20 @@ namespace PROG6212_POE_P3.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult ClaimForm(Claim claim)
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Error = "Please correct the highlighted validation errors.";
-                return View(claim);
-            }
+            var redirect = AuthorizeRole("Lecturer");
+            if (redirect != null) return redirect;
 
-            string username = HttpContext.Session.GetString("Username");
+            var username = HttpContext.Session.GetString("Username");
             var lecturer = _users.FirstOrDefault(u => u.Username == username && u.Role == "Lecturer");
             if (lecturer == null)
             {
                 ViewBag.Error = "Lecturer not found.";
+                return View(claim);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Error = "Please correct the highlighted validation errors.";
                 return View(claim);
             }
 
@@ -195,7 +177,6 @@ namespace PROG6212_POE_P3.Controllers
                 {
                     using var fileStream = new FileStream(filePath, FileMode.Create);
                     claim.DocumentUpload.CopyTo(fileStream);
-
                     claim.UploadedFileName = uniqueFileName;
                     claim.Notes = string.IsNullOrEmpty(claim.Notes)
                         ? "File uploaded successfully."
@@ -223,6 +204,9 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult Coordinator()
         {
+            var redirect = AuthorizeRole("Admin1");
+            if (redirect != null) return redirect;
+
             var pendingClaims = _claims.Where(c => c.Status == ClaimStatus.Pending).ToList();
             return View(pendingClaims);
         }
@@ -233,6 +217,9 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult AcademicManager()
         {
+            var redirect = AuthorizeRole("Admin2");
+            if (redirect != null) return redirect;
+
             var verifiedClaims = _claims.Where(c => c.Status == ClaimStatus.Verified).ToList();
             return View(verifiedClaims);
         }
@@ -247,7 +234,6 @@ namespace PROG6212_POE_P3.Controllers
             if (claim == null) return RedirectToAction("MainMenu");
 
             var originalStatus = claim.Status;
-
             if (Enum.TryParse(status, out ClaimStatus newStatus))
                 claim.Status = newStatus;
 
@@ -278,16 +264,28 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult HRMain()
         {
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
             return View(_users);
         }
 
         [HttpGet]
-        public IActionResult AddUser() => View(new User());
+        public IActionResult AddUser()
+        {
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
+            return View(new User());
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult AddUser(User user)
         {
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
             if (!ModelState.IsValid) return View(user);
 
             user.Id = _users.Count + 1;
@@ -296,28 +294,29 @@ namespace PROG6212_POE_P3.Controllers
             return RedirectToAction("HRMain");
         }
 
-        // EDIT USER (GET)
         [HttpGet]
         public IActionResult EditUser(int id)
         {
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
             var user = _users.FirstOrDefault(u => u.Id == id);
-            if (user == null)
-                return NotFound();
+            if (user == null) return NotFound();
 
             return View(user);
         }
 
-        // EDIT USER (POST)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditUser(User updatedUser)
         {
-            if (!ModelState.IsValid)
-                return View(updatedUser);
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
+            if (!ModelState.IsValid) return View(updatedUser);
 
             var user = _users.FirstOrDefault(u => u.Id == updatedUser.Id);
-            if (user == null)
-                return NotFound();
+            if (user == null) return NotFound();
 
             user.Username = updatedUser.Username;
             user.Password = updatedUser.Password;
@@ -329,12 +328,13 @@ namespace PROG6212_POE_P3.Controllers
         }
 
         // ----------------------------
-        // HELPER METHODS
+        // LOGOUT
         // ----------------------------
-        private bool CheckRole(string role)
+        [HttpGet]
+        public IActionResult Logout()
         {
-            string sessionRole = HttpContext.Session.GetString("Role");
-            return sessionRole == role;
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login");
         }
 
         public IActionResult Privacy() => View();

@@ -27,9 +27,5 @@ namespace PROG6212_POE_P3.Models
         [Range(0, (double)decimal.MaxValue, ErrorMessage = "Hourly rate must be greater than 0.")]
         [Display(Name = "Hourly Rate (R)")]
         public decimal HourlyRate { get; set; } = 0; // Only relevant for Lecturers
-
-        [EmailAddress(ErrorMessage = "Invalid email address.")]
-        [Display(Name = "Email")]
-        public string? Email { get; set; }
     }
 }

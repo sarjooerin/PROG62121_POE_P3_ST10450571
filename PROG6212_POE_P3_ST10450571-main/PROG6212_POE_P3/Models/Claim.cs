@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema; // <-- Needed for [NotMapped]
 using Microsoft.AspNetCore.Http;
 
 namespace PROG6212_POE_P3.Models
@@ -47,6 +48,7 @@ namespace PROG6212_POE_P3.Models
         public string? FilePath { get; set; }
 
         // File binding in forms
+        [NotMapped] // <-- Fix EF Core mapping issue
         [Display(Name = "Supporting Document")]
         public IFormFile? DocumentUpload { get; set; }
 

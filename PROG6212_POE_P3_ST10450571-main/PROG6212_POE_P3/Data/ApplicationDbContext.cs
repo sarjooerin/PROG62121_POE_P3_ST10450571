@@ -22,8 +22,9 @@ namespace PROG6212_POE_P3.Data
             modelBuilder.Entity<User>().HasData(
                 new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", Name = "Lec 1", HourlyRate = 150 },
                 new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", Name = "HR", HourlyRate = 0 },
-                new User { Id = 3, Username = "coordinator1", Password = "coord123", Role = "Coordinator", Name = "Coord 1", HourlyRate = 0 },
-                new User { Id = 4, Username = "manager1", Password = "manager123", Role = "Manager", Name = "Manager 1", HourlyRate = 0 }
+                new User { Id = 3, Username = "admin1", Password = "coord123", Role = "admin", Name = "Coord 1", HourlyRate = 0 },
+                new User { Id = 4, Username = "admin2", Password = "manager123", Role = "admin", Name = "Manager 1", HourlyRate = 0 }
+
             );
 
             // Optional: Seed Claims (remove if not needed)
