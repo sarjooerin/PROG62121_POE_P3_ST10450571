@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PROG6212_POE_P3.Data;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace PROG6212_POE_P3
 {
@@ -21,6 +24,10 @@ namespace PROG6212_POE_P3
                 options.Cookie.HttpOnly = true; // Secure access
                 options.Cookie.IsEssential = true; // Required for GDPR compliance
             });
+
+            // --- Add EF Core DbContext with SQL Server ---
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

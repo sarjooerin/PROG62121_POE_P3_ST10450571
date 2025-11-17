@@ -28,8 +28,6 @@ namespace PROG6212_POE_P3.Models
         [Display(Name = "Hours Worked")]
         public int HoursWorked { get; set; }
 
-        [Range(1, (double)decimal.MaxValue, ErrorMessage = "Hourly rate must be greater than 0.")]
-        [Display(Name = "Hourly Rate (R)")]
         public decimal HourlyRate { get; set; }
 
         // Auto-calculated total payment

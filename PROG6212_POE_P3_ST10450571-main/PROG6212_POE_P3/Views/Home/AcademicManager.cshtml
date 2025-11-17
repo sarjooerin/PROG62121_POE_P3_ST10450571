@@ -185,7 +185,6 @@
                         <td>@claim.LecturerName</td>
                         <td>@claim.DateSubmitted.ToString("yyyy-MM-dd")</td>
                         <td>@claim.HoursWorked</td>
-                        <td>R@((claim.HoursWorked * claim.HourlyRate).ToString("N2"))</td>
 
                         @* MODIFIED: Display "Pending (Manager Review)" if status is Verified, otherwise display the actual status. *@
                         <td class="status-@claim.Status.ToString().ToLower()">

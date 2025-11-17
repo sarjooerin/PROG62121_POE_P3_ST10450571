@@ -3,44 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\coordinator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\coordinator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\lecturerclaim\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\lecturerclaim\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\mainmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\mainmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\hrmain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\hrmain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\claimform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\claimform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\academicmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\academicmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\hrmain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\hrmain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\lecturermainmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\lecturermainmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\mainmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\mainmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\services\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:services\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\services\\claimstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:services\\claimstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,89 +90,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\MainMenu.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
-              "RelativeToolTip": "Views\\Home\\MainMenu.cshtml",
-              "ViewState": "AgIAABwAAAAANDMzMzMrwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:53:25.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Dashboard.cshtml",
-              "RelativeToolTip": "Views\\Home\\Dashboard.cshtml",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAALMAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:45:38.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADsAAAAANDMzMzMbwEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:44:37.105Z",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:23:33.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "LecturerMainMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\LecturerMainMenu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\LecturerMainMenu.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\LecturerMainMenu.cshtml",
-              "RelativeToolTip": "Views\\Home\\LecturerMainMenu.cshtml",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwEkAAAAfAAAAAAAAAA==",
+              "Title": "AcademicManager.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AcademicManager.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AcademicManager.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AcademicManager.cshtml",
+              "RelativeToolTip": "Views\\Home\\AcademicManager.cshtml",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAkwLoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:37:40.898Z",
+              "WhenOpened": "2025-11-17T20:56:15.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EditUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\EditUser.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
-              "RelativeToolTip": "Views\\Home\\EditUser.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:25:09.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AddUser.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
-              "RelativeToolTip": "Views\\Home\\AddUser.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwFkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:24:35.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "HRMain.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\HRMain.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\HRMain.cshtml",
@@ -145,41 +133,223 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAFIBAAAA/P////8bwHsAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T17:56:52.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "ClaimsController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimsController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwDgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T17:56:36.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAALMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:45:38.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAEIAAAAAZ2ZmZmYkwE4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T20:38:20.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ClaimForm.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\ClaimForm.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\ClaimForm.cshtml",
               "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\ClaimForm.cshtml",
               "RelativeToolTip": "Views\\Home\\ClaimForm.cshtml",
-              "ViewState": "AgIAAHwAAAAAMzMzMzMrwI4AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAMzMzMzMrwHYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-17T18:46:03.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClaimsController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
-              "RelativeToolTip": "Controllers\\ClaimsController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAjwCYAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Coordinator.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Coordinator.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Coordinator.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Coordinator.cshtml",
+              "RelativeToolTip": "Views\\Home\\Coordinator.cshtml",
+              "ViewState": "AgIAACIAAAAANDMzMzMrwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T20:39:06.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Models\\Claim.cs",
+              "RelativeDocumentMoniker": "Models\\Claim.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Models\\Claim.cs",
+              "RelativeToolTip": "Models\\Claim.cs",
+              "ViewState": "AgIAABQAAAAAzszMzMwEwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T17:56:36.046Z",
+              "WhenOpened": "2025-11-17T20:55:43.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\LecturerClaim\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\LecturerClaim\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\LecturerClaim\\Index.cshtml",
+              "RelativeToolTip": "Views\\LecturerClaim\\Index.cshtml",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAkwIkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T20:57:52.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:25:40.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LecturerMainMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\LecturerMainMenu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\LecturerMainMenu.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\LecturerMainMenu.cshtml",
+              "RelativeToolTip": "Views\\Home\\LecturerMainMenu.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:37:40.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\MainMenu.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
+              "RelativeToolTip": "Views\\Home\\MainMenu.cshtml",
+              "ViewState": "AgIAABwAAAAANDMzMzMrwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:53:25.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Services\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "Services\\EncryptionHelper.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Services\\EncryptionHelper.cs",
+              "RelativeToolTip": "Services\\EncryptionHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:38:06.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ClaimStore.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Services\\ClaimStore.cs",
+              "RelativeDocumentMoniker": "Services\\ClaimStore.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Services\\ClaimStore.cs",
+              "RelativeToolTip": "Services\\ClaimStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:38:03.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADsAAAAANDMzMzMbwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:44:37.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T20:24:25.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EditUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EditUser.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
+              "RelativeToolTip": "Views\\Home\\EditUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:25:09.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AddUser.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
+              "RelativeToolTip": "Views\\Home\\AddUser.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwFkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:24:35.519Z",
               "EditorCaption": ""
             }
           ]

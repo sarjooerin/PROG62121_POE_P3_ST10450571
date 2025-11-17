@@ -19,10 +19,11 @@
 
 		<!-- SQLite Provider (Keeping your choice) -->
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
 
 		<!-- Scaffolding and Tools (Necessary for migrations and views) -->
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.10">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
