@@ -77,6 +77,16 @@
     <h2>Add New User</h2>
 
     <form asp-action="AddUser" method="post">
+
+        <label asp-for="FirstName">FirstName</label>
+        <input asp-for="FirstName" type="FirstName" />
+
+        <label asp-for="Surname">Surname</label>
+        <input asp-for="Surname" type="Surname" />
+
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" type="Email" />
+
         <label asp-for="Username">Username</label>
         <input asp-for="Username" type="text" />
 

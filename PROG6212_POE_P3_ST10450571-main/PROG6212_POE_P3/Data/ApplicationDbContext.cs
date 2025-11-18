@@ -20,10 +20,10 @@ namespace PROG6212_POE_P3.Data
 
             // Seed Users
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", Name = "Lec 1", HourlyRate = 150 },
-                new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", Name = "HR", HourlyRate = 0 },
-                new User { Id = 3, Username = "admin1", Password = "coord123", Role = "admin", Name = "Coord 1", HourlyRate = 0 },
-                new User { Id = 4, Username = "admin2", Password = "manager123", Role = "admin", Name = "Manager 1", HourlyRate = 0 }
+                new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", FirstName = "Lec 1", HourlyRate = 150 },
+                new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", FirstName = "HR", HourlyRate = 0 },
+                new User { Id = 3, Username = "admin1", Password = "coord123", Role = "admin", FirstName = "Coord 1", HourlyRate = 0 },
+                new User { Id = 4, Username = "admin2", Password = "manager123", Role = "admin", FirstName = "Manager 1", HourlyRate = 0 }
 
             );
 

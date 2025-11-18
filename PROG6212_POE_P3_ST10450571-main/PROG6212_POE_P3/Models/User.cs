@@ -20,12 +20,23 @@ namespace PROG6212_POE_P3.Models
         [Display(Name = "Role")]
         public string? Role { get; set; } // HR, Lecturer, Coordinator, Manager
 
-        [Required(ErrorMessage = "Full name is required.")]
-        [Display(Name = "Full Name")]
-        public string? Name { get; set; }
+        // ---------------------------
+        // Newly Added Properties
+        // ---------------------------
 
+        [Display(Name = "First Name")]
+        public string? FirstName { get; set; }
+
+        [Display(Name = "Surname")]
+        public string? Surname { get; set; }
+
+        [EmailAddress(ErrorMessage = "Invalid email format.")]
+        [Display(Name = "Email Address")]
+        public string? Email { get; set; }
+
+        // Hourly rate only applies to lecturers
         [Range(0, (double)decimal.MaxValue, ErrorMessage = "Hourly rate must be greater than 0.")]
         [Display(Name = "Hourly Rate (R)")]
-        public decimal HourlyRate { get; set; } = 0; // Only relevant for Lecturers
+        public decimal HourlyRate { get; set; } = 0;
     }
 }

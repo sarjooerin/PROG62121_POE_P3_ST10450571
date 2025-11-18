@@ -29,6 +29,19 @@
             color: #333;
         }
 
+    /* Success Message Styling */
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
     .dashboard-links {
         margin-bottom: 30px;
     }
@@ -119,6 +132,14 @@
 <div class="dashboard-container">
     <h2>Dashboard - Claims</h2>
 
+    <!-- ✅ SUCCESS MESSAGE -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
     <div class="dashboard-links">
         <a class="btn btn-submit" href="@Url.Action("ClaimForm", "Home")">Submit New Claim</a>
     </div>
@@ -153,6 +174,7 @@
                             @if (!string.IsNullOrEmpty(claim.UploadedFileName))
                             {
                                 var fileUrl = Url.Content("~/uploads/" + claim.UploadedFileName);
+
                                 if (claim.UploadedFileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
                                 {
                                     <a href="@fileUrl" target="_blank">View PDF</a>

@@ -641,6 +641,15 @@
           }
         }
       },
+      "iTextSharp-LGPL/4.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/iTextSharp.dll": {}
+        },
+        "runtime": {
+          "lib/iTextSharp.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/9.0.10": {
         "type": "package",
         "compile": {
@@ -4334,6 +4343,18 @@
         "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll",
         "logo.png"
+      ]
+    },
+    "iTextSharp-LGPL/4.1.6": {
+      "sha512": "35STyoGKJOX1oTUWHOzn8/I1NXQMbkxKZfBsYwj8ZjOICVEZIi88wfOekQbYeU6MK0VOoZrMMO1e7KQVjJSIxQ==",
+      "type": "package",
+      "path": "itextsharp-lgpl/4.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "itextsharp-lgpl.4.1.6.nupkg.sha512",
+        "itextsharp-lgpl.nuspec",
+        "lib/iTextSharp.dll"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/9.0.10": {
@@ -9252,6 +9273,7 @@
       "Microsoft.Extensions.DependencyInjection >= 9.0.10",
       "Microsoft.Extensions.Hosting >= 9.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
+      "iTextSharp-LGPL >= 4.1.6",
       "xunit >= 2.9.3"
     ]
   },
@@ -9343,6 +9365,10 @@
             "target": "Package",
             "version": "[9.0.0, )"
           },
+          "iTextSharp-LGPL": {
+            "target": "Package",
+            "version": "[4.1.6, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.9.3, )"
@@ -9370,5 +9396,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iTextSharp-LGPL 4.1.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "iTextSharp-LGPL",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

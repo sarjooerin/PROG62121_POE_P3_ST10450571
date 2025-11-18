@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rfEk30THDzQ=",
+  "dgSpecHash": "dXAECn2QXvs=",
   "success": true,
   "projectFilePath": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\PROG6212_POE_P3.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\lab_services_student\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\lab_services_student\\.nuget\\packages\\itextsharp-lgpl\\4.1.6\\itextsharp-lgpl.4.1.6.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.10\\microsoft.aspnetcore.cryptography.internal.9.0.10.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.10\\microsoft.aspnetcore.cryptography.keyderivation.9.0.10.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
@@ -199,5 +200,18 @@
     "C:\\Users\\lab_services_student\\.nuget\\packages\\xunit.extensibility.core\\2.9.3\\xunit.extensibility.core.2.9.3.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'iTextSharp-LGPL 4.1.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\PROG6212_POE_P3.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\PROG6212_POE_P3.csproj",
+      "libraryId": "iTextSharp-LGPL",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

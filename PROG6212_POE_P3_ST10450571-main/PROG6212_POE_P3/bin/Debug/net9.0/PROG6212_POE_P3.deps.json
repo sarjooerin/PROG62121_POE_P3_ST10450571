@@ -17,6 +17,7 @@
           "Microsoft.Extensions.DependencyInjection": "9.0.10",
           "Microsoft.Extensions.Hosting": "9.0.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0",
+          "iTextSharp-LGPL": "4.1.6",
           "xunit": "2.9.3"
         },
         "runtime": {
@@ -595,6 +596,14 @@
         "resources": {
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
+          }
+        }
+      },
+      "iTextSharp-LGPL/4.1.6": {
+        "runtime": {
+          "lib/iTextSharp.dll": {
+            "assemblyVersion": "4.1.6.0",
+            "fileVersion": "4.1.6.0"
           }
         }
       },
@@ -2939,6 +2948,13 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "iTextSharp-LGPL/4.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-35STyoGKJOX1oTUWHOzn8/I1NXQMbkxKZfBsYwj8ZjOICVEZIi88wfOekQbYeU6MK0VOoZrMMO1e7KQVjJSIxQ==",
+      "path": "itextsharp-lgpl/4.1.6",
+      "hashPath": "itextsharp-lgpl.4.1.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/9.0.10": {
       "type": "package",

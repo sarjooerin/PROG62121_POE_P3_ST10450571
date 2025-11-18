@@ -88,6 +88,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "iTextSharp-LGPL": {
+              "target": "Package",
+              "version": "[4.1.6, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.9.3, )"

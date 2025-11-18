@@ -14,6 +14,7 @@
 
 	<ItemGroup>
 		<!-- Core Identity and EF Core Packages -->
+		<PackageReference Include="iTextSharp-LGPL" Version="4.1.6" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.10" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
 

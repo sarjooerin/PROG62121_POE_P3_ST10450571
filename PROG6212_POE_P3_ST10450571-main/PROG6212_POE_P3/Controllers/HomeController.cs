@@ -9,6 +9,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PROG6212_POE_P3.Models;
 
+// PDF libraries
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 namespace PROG6212_POE_P3.Controllers
 {
     public class HomeController : Controller
@@ -22,10 +26,10 @@ namespace PROG6212_POE_P3.Controllers
         // --- In-memory users list ---
         private static List<User> _users = new List<User>()
         {
-            new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", Name = "Lec 1", HourlyRate = 150 },
-            new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", Name = "HR", HourlyRate = 0 },
-            new User { Id = 3, Username = "admin1", Password = "coord123", Role = "Admin1", Name = "Coord 1", HourlyRate = 0 }, // Coordinator/Admin1
-            new User { Id = 4, Username = "admin2", Password = "manager123", Role = "Admin2", Name = "Manager 1", HourlyRate = 0 } // Manager/Admin2
+            new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", FirstName = "Lec 1", HourlyRate = 150 },
+            new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", FirstName = "HR", HourlyRate = 0 },
+            new User { Id = 3, Username = "admin1", Password = "coord123", Role = "Admin1", FirstName = "Coord 1", HourlyRate = 0 },
+            new User { Id = 4, Username = "admin2", Password = "manager123", Role = "Admin2", FirstName = "Manager 1", HourlyRate = 0 }
         };
 
         static HomeController()
@@ -71,10 +75,9 @@ namespace PROG6212_POE_P3.Controllers
                 return View();
             }
 
-            // Store user session
             HttpContext.Session.SetString("Username", user.Username);
             HttpContext.Session.SetString("Role", user.Role);
-            HttpContext.Session.SetString("Name", user.Name);
+            HttpContext.Session.SetString("Name", user.FirstName);
 
             return RedirectToAction("MainMenu");
         }
@@ -106,7 +109,7 @@ namespace PROG6212_POE_P3.Controllers
                 TempData["Error"] = "You do not have access to this page.";
                 return RedirectToAction("MainMenu");
             }
-            return null; // access granted
+            return null;
         }
 
         // ----------------------------
@@ -120,7 +123,7 @@ namespace PROG6212_POE_P3.Controllers
 
             var username = HttpContext.Session.GetString("Username");
             var lecturer = _users.FirstOrDefault(u => u.Username == username);
-            var lecturerClaims = _claims.Where(c => c.LecturerName == lecturer.Name).ToList();
+            var lecturerClaims = _claims.Where(c => c.LecturerName == lecturer.FirstName).ToList();
             return View(lecturerClaims);
         }
 
@@ -142,6 +145,7 @@ namespace PROG6212_POE_P3.Controllers
 
             var username = HttpContext.Session.GetString("Username");
             var lecturer = _users.FirstOrDefault(u => u.Username == username && u.Role == "Lecturer");
+
             if (lecturer == null)
             {
                 ViewBag.Error = "Lecturer not found.";
@@ -154,7 +158,7 @@ namespace PROG6212_POE_P3.Controllers
                 return View(claim);
             }
 
-            claim.LecturerName = lecturer.Name;
+            claim.LecturerName = lecturer.FirstName;
             claim.HourlyRate = lecturer.HourlyRate;
 
             if (claim.HoursWorked > 180)
@@ -163,7 +167,6 @@ namespace PROG6212_POE_P3.Controllers
                 return View(claim);
             }
 
-            // File upload
             if (claim.DocumentUpload != null && claim.DocumentUpload.Length > 0)
             {
                 string uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads");
@@ -267,6 +270,9 @@ namespace PROG6212_POE_P3.Controllers
             var redirect = AuthorizeRole("HR");
             if (redirect != null) return redirect;
 
+            ViewBag.Error = TempData["Error"];
+            ViewBag.Success = TempData["Success"];
+
             return View(_users);
         }
 
@@ -318,13 +324,173 @@ namespace PROG6212_POE_P3.Controllers
             var user = _users.FirstOrDefault(u => u.Id == updatedUser.Id);
             if (user == null) return NotFound();
 
+            user.FirstName = updatedUser.FirstName;
+            user.Surname = updatedUser.Surname;
+            user.Email = updatedUser.Email;
             user.Username = updatedUser.Username;
             user.Password = updatedUser.Password;
             user.Role = updatedUser.Role;
-            user.Name = updatedUser.Name;
             user.HourlyRate = updatedUser.HourlyRate;
 
             return RedirectToAction("HRMain");
+        }
+
+        // ----------------------------
+        // DELETE USER
+        // ----------------------------
+        [HttpGet]
+        public IActionResult DeleteUser(int id)
+        {
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
+            var user = _users.FirstOrDefault(u => u.Id == id);
+            if (user == null)
+            {
+                TempData["Error"] = "User not found.";
+                return RedirectToAction("HRMain");
+            }
+
+            var currentUser = HttpContext.Session.GetString("Username");
+            if (user.Username == currentUser)
+            {
+                TempData["Error"] = "You cannot delete your own account.";
+                return RedirectToAction("HRMain");
+            }
+
+            _users.Remove(user);
+
+            TempData["Success"] = $"User '{user.Username}' deleted successfully.";
+            return RedirectToAction("HRMain");
+        }
+
+        // ------------------------------------------------------
+        // PDF EXPORT FEATURE
+        // ------------------------------------------------------
+
+        /// <summary>
+        /// Generates a PDF report summarizing all claims with 'Approved' status for payroll purposes.
+        /// Accessible only by HR role.
+        /// </summary>
+        [HttpGet]
+        public IActionResult GenerateReport()
+        {
+            var redirect = AuthorizeRole("HR");
+            if (redirect != null) return redirect;
+
+            // Filter to approved claims that are ready for payroll
+            var approvedClaims = _claims.Where(c => c.Status == ClaimStatus.Approved).ToList();
+
+            using (var ms = new MemoryStream())
+            {
+                Document document = new Document(PageSize.A4, 40, 40, 40, 40);
+                PdfWriter.GetInstance(document, ms);
+                document.Open();
+
+                // Report Title
+                var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20);
+                document.Add(new Paragraph("Payroll Claims Report\n\n", titleFont) { Alignment = Element.ALIGN_CENTER });
+
+                if (!approvedClaims.Any())
+                {
+                    document.Add(new Paragraph("No approved claims available for payroll at this time.", FontFactory.GetFont(FontFactory.HELVETICA, 12)));
+                    document.Close();
+                    return File(ms.ToArray(), "application/pdf", $"Payroll_Report_{DateTime.Now:yyyyMMdd_HHmm}.pdf");
+                }
+
+                var normal = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+
+                // Table for Claims Data
+                PdfPTable table = new PdfPTable(6);
+                table.WidthPercentage = 100;
+                table.SetWidths(new float[] { 1f, 2.5f, 2f, 1f, 1.5f, 2f }); // Column widths
+
+                // Table Headers
+                foreach (string header in new[] { "ID", "Lecturer Name", "Date", "Hours", "Rate (R)", "Amount (R)" })
+                {
+                    var cell = new PdfPCell(new Phrase(header, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 11)))
+                    {
+                        BackgroundColor = new (108, 99, 255), // #6C63FF
+                        HorizontalAlignment = Element.ALIGN_CENTER,
+                        Padding = 8,
+                        Border = 0
+                    };
+                    table.AddCell(cell);
+                }
+
+                decimal grandTotal = 0;
+
+                // Table Rows
+                foreach (var claim in approvedClaims)
+                {
+                    table.AddCell(new Phrase(claim.Id.ToString(), normal));
+                    table.AddCell(new Phrase(claim.LecturerName, normal));
+                    table.AddCell(new Phrase(claim.DateSubmitted.ToString("yyyy-MM-dd"), normal));
+                    table.AddCell(new Phrase(claim.HoursWorked.ToString(), normal));
+                    table.AddCell(new Phrase(claim.HourlyRate.ToString("0.00"), normal));
+
+                    decimal totalAmount = claim.HoursWorked * claim.HourlyRate;
+                    table.AddCell(new Phrase(totalAmount.ToString("0.00"), normal));
+                    grandTotal += totalAmount;
+                }
+
+                document.Add(table);
+
+                // Summary/Total
+                var totalFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14);
+                document.Add(new Paragraph("\n---", totalFont) { Alignment = Element.ALIGN_RIGHT });
+                document.Add(new Paragraph($"Grand Total for Approved Claims: R{grandTotal:0.00}", totalFont) { Alignment = Element.ALIGN_RIGHT });
+
+                document.Close();
+
+                return File(ms.ToArray(), "application/pdf", $"Payroll_Report_{DateTime.Now:yyyyMMdd_HHmm}.pdf");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GenerateClaimPDF(int id)
+        {
+            var username = HttpContext.Session.GetString("Username");
+            var role = HttpContext.Session.GetString("Role");
+
+            if (string.IsNullOrEmpty(username))
+                return RedirectToAction("Login");
+
+            var claim = _claims.FirstOrDefault(c => c.Id == id);
+            if (claim == null) return NotFound("Claim not found.");
+
+            if (role == "Lecturer" && claim.LecturerName != HttpContext.Session.GetString("Name"))
+                return Unauthorized();
+
+            using (var ms = new MemoryStream())
+            {
+                Document document = new Document(PageSize.A4, 40, 40, 40, 40);
+                PdfWriter.GetInstance(document, ms);
+                document.Open();
+
+                var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20);
+                var header = new Paragraph("Claim Summary Report\n\n", titleFont)
+                {
+                    Alignment = Element.ALIGN_CENTER
+                };
+                document.Add(header);
+
+                var normal = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+
+                document.Add(new Paragraph($"Claim ID: {claim.Id}", normal));
+                document.Add(new Paragraph($"Lecturer Name: {claim.LecturerName}", normal));
+                document.Add(new Paragraph($"Date Submitted: {claim.DateSubmitted:yyyy-MM-dd}", normal));
+                document.Add(new Paragraph($"Hours Worked: {claim.HoursWorked}", normal));
+                document.Add(new Paragraph($"Hourly Rate: R{claim.HourlyRate}", normal));
+                document.Add(new Paragraph($"Total Amount: R{claim.HoursWorked * claim.HourlyRate}", normal));
+                document.Add(new Paragraph($"Status: {claim.Status}", normal));
+                document.Add(new Paragraph("\nCoordinator / Manager Remarks:", normal));
+                document.Add(new Paragraph(claim.CoordinatorRemarks ?? "None", normal));
+
+                document.Close();
+
+                return File(ms.ToArray(), "application/pdf", $"Claim_{claim.Id}.pdf");
+            }
         }
 
         // ----------------------------
