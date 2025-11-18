@@ -26,16 +26,18 @@ namespace PROG6212_POE_P3.Controllers
         // --- In-memory users list ---
         private static List<User> _users = new List<User>()
         {
-            new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", FirstName = "Lec 1", HourlyRate = 150 },
-            new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", FirstName = "HR", HourlyRate = 0 },
-            new User { Id = 3, Username = "admin1", Password = "coord123", Role = "Admin1", FirstName = "Coord 1", HourlyRate = 0 },
-            new User { Id = 4, Username = "admin2", Password = "manager123", Role = "Admin2", FirstName = "Manager 1", HourlyRate = 0 }
+            // Note: Added Surname to the initial Lecturer
+            new User { Id = 1, Username = "lecturer1", Password = "pass123", Role = "Lecturer", FirstName = "Lec 1", Surname = "Jones", HourlyRate = 150 },
+            new User { Id = 2, Username = "hr1", Password = "hr123", Role = "HR", FirstName = "HR", Surname = "Admin", HourlyRate = 0 },
+            new User { Id = 3, Username = "admin1", Password = "coord123", Role = "Admin1", FirstName = "Coord 1", Surname = "Smith", HourlyRate = 0 },
+            new User { Id = 4, Username = "admin2", Password = "manager123", Role = "Admin2", FirstName = "Manager 1", Surname = "Brown", HourlyRate = 0 }
         };
 
         static HomeController()
         {
             if (!_claims.Any())
             {
+                // Added a claim using the initial user's first name
                 _claims.Add(new Claim { Id = 1, LecturerName = "Lec 1", DateSubmitted = DateTime.Now.AddDays(-5), HoursWorked = 10, HourlyRate = 150.00m, Status = ClaimStatus.Pending, UploadedFileName = "doc1.pdf", CoordinatorRemarks = "" });
                 _claims.Add(new Claim { Id = 2, LecturerName = "Lec 2", DateSubmitted = DateTime.Now.AddDays(-4), HoursWorked = 25, HourlyRate = 180.00m, Status = ClaimStatus.Verified, UploadedFileName = "doc2.docx", CoordinatorRemarks = "Coordinator: Verified hours and document." });
                 _claims.Add(new Claim { Id = 3, LecturerName = "Lec 3", DateSubmitted = DateTime.Now.AddDays(-3), HoursWorked = 5, HourlyRate = 100.00m, Status = ClaimStatus.Approved, UploadedFileName = "doc3.pdf", CoordinatorRemarks = "Coordinator: Verified. Manager: Final Approved." });
@@ -79,6 +81,13 @@ namespace PROG6212_POE_P3.Controllers
             HttpContext.Session.SetString("Role", user.Role);
             HttpContext.Session.SetString("Name", user.FirstName);
 
+            // Conditional Redirect: HR users go straight to HRMain
+            if (user.Role == "HR")
+            {
+                return RedirectToAction("HRMain");
+            }
+
+            // Other users (Lecturer, Admin1, Admin2) go to the general MainMenu
             return RedirectToAction("MainMenu");
         }
 
@@ -103,14 +112,21 @@ namespace PROG6212_POE_P3.Controllers
         // ----------------------------
         private IActionResult AuthorizeRole(params string[] roles)
         {
+            // Get the user role from the session
             var userRole = HttpContext.Session.GetString("Role");
-            if (string.IsNullOrEmpty(userRole) || !roles.Contains(userRole))
+
+            // Check if the role exists and if it's one of the allowed roles
+            if (string.IsNullOrEmpty(userRole) || !roles.Contains(userRole, StringComparer.OrdinalIgnoreCase))
             {
+                // If the user doesn't have access, redirect them to the MainMenu
                 TempData["Error"] = "You do not have access to this page.";
                 return RedirectToAction("MainMenu");
             }
+
+            // User is authorized
             return null;
         }
+
 
         // ----------------------------
         // DASHBOARD & CLAIMS
@@ -118,14 +134,38 @@ namespace PROG6212_POE_P3.Controllers
         [HttpGet]
         public IActionResult Dashboard()
         {
+            // Role-based authorization: Check the role of the logged-in user
             var redirect = AuthorizeRole("Lecturer", "HR", "Admin1", "Admin2");
             if (redirect != null) return redirect;
 
             var username = HttpContext.Session.GetString("Username");
-            var lecturer = _users.FirstOrDefault(u => u.Username == username);
-            var lecturerClaims = _claims.Where(c => c.LecturerName == lecturer.FirstName).ToList();
-            return View(lecturerClaims);
+            var role = HttpContext.Session.GetString("Role");
+
+            // Admins can see all claims
+            if (role == "Admin1" || role == "Admin2")
+            {
+                return View(_claims); // Show all claims to admins
+            }
+
+            // Lecturers can only see their own claims
+            if (role == "Lecturer")
+            {
+                var lecturer = _users.FirstOrDefault(u => u.Username == username && u.Role == "Lecturer");
+                if (lecturer == null) return RedirectToAction("MainMenu");
+
+                var lecturerClaims = _claims.Where(c => c.LecturerName == lecturer.FirstName).ToList();
+                return View(lecturerClaims); // Show claims specific to the logged-in lecturer
+            }
+
+            // HR should not be accessing this page directly, but included for completeness if role access changes
+            if (role == "HR")
+            {
+                return RedirectToAction("HRMain");
+            }
+
+            return RedirectToAction("MainMenu");
         }
+
 
         [HttpGet]
         public IActionResult ClaimForm()
@@ -202,29 +242,37 @@ namespace PROG6212_POE_P3.Controllers
         }
 
         // ----------------------------
-        // COORDINATOR DASHBOARD
+        // COORDINATOR (Admin1)
         // ----------------------------
         [HttpGet]
         public IActionResult Coordinator()
         {
+            // Authorization: Only Admin1 (Coordinator) can access this page
             var redirect = AuthorizeRole("Admin1");
             if (redirect != null) return redirect;
 
-            var pendingClaims = _claims.Where(c => c.Status == ClaimStatus.Pending).ToList();
-            return View(pendingClaims);
+            // Filter claims: Show claims that are in the 'Pending' status (ready for Coordinator review)
+            var claimsToReview = _claims.Where(c => c.Status == ClaimStatus.Pending).ToList();
+
+            // You will need a view named 'Coordinator.cshtml' to display this list
+            return View(claimsToReview);
         }
 
         // ----------------------------
-        // MANAGER DASHBOARD
+        // ACADEMIC MANAGER (Admin2)
         // ----------------------------
         [HttpGet]
         public IActionResult AcademicManager()
         {
+            // Authorization: Only Admin2 (Academic Manager) can access this page
             var redirect = AuthorizeRole("Admin2");
             if (redirect != null) return redirect;
 
-            var verifiedClaims = _claims.Where(c => c.Status == ClaimStatus.Verified).ToList();
-            return View(verifiedClaims);
+            // Filter claims: Show claims that are in the 'Verified' status (ready for final approval)
+            var claimsToReview = _claims.Where(c => c.Status == ClaimStatus.Verified).ToList();
+
+            // You will need a view named 'AcademicManager.cshtml' to display this list
+            return View(claimsToReview);
         }
 
         // ----------------------------
@@ -401,16 +449,16 @@ namespace PROG6212_POE_P3.Controllers
                 var normal = FontFactory.GetFont(FontFactory.HELVETICA, 10);
 
                 // Table for Claims Data
-                PdfPTable table = new PdfPTable(6);
+                PdfPTable table = new PdfPTable(7); // Corrected to 7 columns
                 table.WidthPercentage = 100;
-                table.SetWidths(new float[] { 1f, 2.5f, 2f, 1f, 1.5f, 2f }); // Column widths
+                table.SetWidths(new float[] { 1f, 2f, 2f, 1.5f, 1.5f, 1.5f, 2f }); // Corrected widths for 7 columns
 
                 // Table Headers
-                foreach (string header in new[] { "ID", "Lecturer Name", "Date", "Hours", "Rate (R)", "Amount (R)" })
+                foreach (string header in new[] { "ID", "First Name", "Surname", "Date", "Hours", "Rate (R)", "Amount (R)" }) // Corrected headers
                 {
                     var cell = new PdfPCell(new Phrase(header, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 11)))
                     {
-                        BackgroundColor = new (108, 99, 255), // #6C63FF
+                        BackgroundColor = new Color(108, 99, 255), // #6C63FF
                         HorizontalAlignment = Element.ALIGN_CENTER,
                         Padding = 8,
                         Border = 0
@@ -423,8 +471,15 @@ namespace PROG6212_POE_P3.Controllers
                 // Table Rows
                 foreach (var claim in approvedClaims)
                 {
+                    // FIX: Look up the user to get first name and surname
+                    var user = _users.FirstOrDefault(u => u.FirstName == claim.LecturerName);
+
+                    string firstName = user?.FirstName ?? claim.LecturerName;
+                    string surname = user?.Surname ?? "N/A";
+
                     table.AddCell(new Phrase(claim.Id.ToString(), normal));
-                    table.AddCell(new Phrase(claim.LecturerName, normal));
+                    table.AddCell(new Phrase(firstName, normal));
+                    table.AddCell(new Phrase(surname, normal));
                     table.AddCell(new Phrase(claim.DateSubmitted.ToString("yyyy-MM-dd"), normal));
                     table.AddCell(new Phrase(claim.HoursWorked.ToString(), normal));
                     table.AddCell(new Phrase(claim.HourlyRate.ToString("0.00"), normal));
@@ -477,8 +532,15 @@ namespace PROG6212_POE_P3.Controllers
 
                 var normal = FontFactory.GetFont(FontFactory.HELVETICA, 12);
 
+                // FIX: Look up the user to get first name and surname
+                var user = _users.FirstOrDefault(u => u.FirstName == claim.LecturerName);
+                string firstName = user?.FirstName ?? claim.LecturerName;
+                string surname = user?.Surname ?? "N/A";
+
+
                 document.Add(new Paragraph($"Claim ID: {claim.Id}", normal));
-                document.Add(new Paragraph($"Lecturer Name: {claim.LecturerName}", normal));
+                document.Add(new Paragraph($"Name: {firstName}", normal));
+                document.Add(new Paragraph($"Surname: {surname}", normal));
                 document.Add(new Paragraph($"Date Submitted: {claim.DateSubmitted:yyyy-MM-dd}", normal));
                 document.Add(new Paragraph($"Hours Worked: {claim.HoursWorked}", normal));
                 document.Add(new Paragraph($"Hourly Rate: R{claim.HourlyRate}", normal));

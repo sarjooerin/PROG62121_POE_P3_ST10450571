@@ -33,7 +33,7 @@ namespace PROG6212_POE_P3.Models
 
         // Auto-calculated total payment
         [Display(Name = "Total Amount (R)")]
-        public decimal TotalPayment { get; set; }
+        public decimal TotalPayment => HoursWorked * HourlyRate;
 
         [Display(Name = "Notes / Additional Info")]
         public string? Notes { get; set; }

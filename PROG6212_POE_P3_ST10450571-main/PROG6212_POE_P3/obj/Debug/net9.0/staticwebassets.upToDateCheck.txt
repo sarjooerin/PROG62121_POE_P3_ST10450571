@@ -61,6 +61,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\uploads\10049c8f-cd0e-4ca1-8028-970f1d4148c1_earrings3.jpg
 wwwroot\uploads\11aff78e-1a2f-4f67-b483-7d5db09580ef_Bracelets.jpg
 wwwroot\uploads\234d6aaa-5170-4928-9a59-9db4d39f1b42_earrings3.jpg
 wwwroot\uploads\25f0e11e-8fee-401b-8b5f-194e3be66cd0_earrings3.jpg
@@ -74,11 +75,13 @@ wwwroot\uploads\6d5b7124-3dfa-49da-9b6b-eee87bdfe810_images.png
 wwwroot\uploads\738e6442-e7ab-4a81-9b80-72c6b7bc1571_images.png
 wwwroot\uploads\7a0cf93c-a01e-46b9-9709-5a90423be685_earrings3.jpg
 wwwroot\uploads\8029e415-5d78-4f7c-80c2-2855de86b426_earrings3.jpg
+wwwroot\uploads\8f9f29aa-ff5b-4176-b5e5-3cbfd79c790f_earings.webp
 wwwroot\uploads\93aa3231-d217-4f21-8c01-96ac0ac2067a_IMG-20251010-WA0002.jpg
 wwwroot\uploads\a23f2849-d652-4e21-a0df-730526edb590_earrins2.webp
 wwwroot\uploads\a679a94d-e3b2-4d4d-b187-13272aab3d78_earrings3.jpg
 wwwroot\uploads\ad8253de-e8f0-4d38-93f7-e09bb87772fb_earings.webp
 wwwroot\uploads\c19f5873-d830-4fcd-b9cf-86b1db657e11_Bracelets.jpg
+wwwroot\uploads\e76ecaa0-e705-4a18-ac5a-145d12ac2c4e_Earrings.jpg
 wwwroot\uploads\eafab5d1-7083-41f5-aa38-29141a5e6ab1_IMG-20251010-WA0001.jpg
 wwwroot\uploads\ec4af3db-5a2d-43ec-82d8-2b779c573c0d_earrins2.webp
 wwwroot\uploads\ec918f9f-e02f-4c0e-b962-1003902309e6_IMG-20251010-WA0001.jpg
