@@ -6,6 +6,16 @@
 }
 
 <style>
+    /* Added style for validation messages to be visible */
+    .text-danger {
+        color: #ff3860;
+        text-align: left;
+        display: block;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+    }
+
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #6C63FF, #00C6FF);
@@ -37,7 +47,9 @@
     }
 
     input[type="text"],
+    input[type="email"],
     input[type="password"],
+    input[type="number"],
     select {
         width: 100%;
         padding: 12px;
@@ -78,29 +90,54 @@
 
     <form asp-action="AddUser" method="post">
 
-        <label asp-for="FirstName">FirstName</label>
-        <input asp-for="FirstName" type="FirstName" />
+        @* Display overall validation summary errors (e.g. from controller logic) *@
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <label asp-for="FirstName">First Name</label>
+        <input asp-for="FirstName" type="text" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
 
         <label asp-for="Surname">Surname</label>
-        <input asp-for="Surname" type="Surname" />
+        <input asp-for="Surname" type="text" />
+        <span asp-validation-for="Surname" class="text-danger"></span>
 
         <label asp-for="Email">Email</label>
-        <input asp-for="Email" type="Email" />
+        <input asp-for="Email" type="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
 
         <label asp-for="Username">Username</label>
         <input asp-for="Username" type="text" />
+        <span asp-validation-for="Username" class="text-danger"></span>
 
         <label asp-for="Password">Password</label>
         <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
 
         <label asp-for="Role">Select Role</label>
-        <select asp-for="Role">
+        <select asp-for="Role" id="Role">
             <option value="">-- Select Role --</option>
             <option value="HR">HR</option>
             <option value="Lecturer">Lecturer</option>
-            <option value="Student">Student</option>
+            <option value="Admin1">Coordinator (Admin1)</option>
+            <option value="Admin2">Academic Manager (Admin2)</option>
         </select>
+        <span asp-validation-for="Role" class="text-danger"></span>
+
+        @* Hourly Rate Field - REMOVED JAVASCRIPT LOGIC so HR can always set it for a Lecturer *@
+        <div>
+            <label asp-for="HourlyRate">Hourly Rate (R)</label>
+            <input asp-for="HourlyRate" type="number" step="0.01" min="0" />
+            <span asp-validation-for="HourlyRate" class="text-danger"></span>
+        </div>
 
         <button type="submit">Add User</button>
     </form>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    @* The JavaScript block for hiding/showing the hourly rate has been removed to allow HR to always input the rate. *@
+}

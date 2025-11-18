@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\claimform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\claimform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\claimform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\claimform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\academicmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\academicmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -65,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|solutionrelative:views\\home\\adduser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEC96F19-70A6-4C19-9D9E-918F40EBF5DB}|PROG6212_POE_P3.csproj|c:\\users\\lab_services_student\\desktop\\prog62121_poe_p3_st10450571\\prog6212_poe_p3_st10450571-main\\prog6212_poe_p3\\views\\lecturerclaim\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -94,11 +94,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "HRMain.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\HRMain.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\HRMain.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\HRMain.cshtml",
+              "RelativeToolTip": "Views\\Home\\HRMain.cshtml",
+              "ViewState": "AgIAAJIAAACAMzMzMzMpwLYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:23:00.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AcademicManager.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AcademicManager.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AcademicManager.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AcademicManager.cshtml",
+              "RelativeToolTip": "Views\\Home\\AcademicManager.cshtml",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAkwPUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T20:56:15.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EditUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EditUser.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
+              "RelativeToolTip": "Views\\Home\\EditUser.cshtml",
+              "ViewState": "AgIAAA8AAAAAzczMzMwawBEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:25:09.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClaimsController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
+              "RelativeToolTip": "Controllers\\ClaimsController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwDgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T17:56:36.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AddUser.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
+              "RelativeToolTip": "Views\\Home\\AddUser.cshtml",
+              "ViewState": "AgIAAHAAAAAANzMzMzMLwHoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:24:35.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LectuerClaim.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Models\\LectuerClaim.cs",
               "RelativeDocumentMoniker": "Models\\LectuerClaim.cs",
@@ -106,12 +167,60 @@
               "RelativeToolTip": "Models\\LectuerClaim.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T20:12:25.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T20:12:25.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\MainMenu.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
+              "RelativeToolTip": "Views\\Home\\MainMenu.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwEAAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:53:25.541Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ClaimForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\ClaimForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ClaimForm.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\ClaimForm.cshtml",
+              "RelativeToolTip": "Views\\Home\\ClaimForm.cshtml",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T18:46:03.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Coordinator.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Coordinator.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Coordinator.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Coordinator.cshtml",
+              "RelativeToolTip": "Views\\Home\\Coordinator.cshtml",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAkwOkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T20:39:06.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T20:25:40.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -124,98 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T20:25:40.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Coordinator.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Coordinator.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Coordinator.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Coordinator.cshtml",
-              "RelativeToolTip": "Views\\Home\\Coordinator.cshtml",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAkwOkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T20:39:06.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HRMain.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\HRMain.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\HRMain.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\HRMain.cshtml",
-              "RelativeToolTip": "Views\\Home\\HRMain.cshtml",
-              "ViewState": "AgIAAJIAAACAMzMzMzMpwLYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:23:00.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AcademicManager.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AcademicManager.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AcademicManager.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AcademicManager.cshtml",
-              "RelativeToolTip": "Views\\Home\\AcademicManager.cshtml",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAkwPUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T20:56:15.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EditUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\EditUser.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\EditUser.cshtml",
-              "RelativeToolTip": "Views\\Home\\EditUser.cshtml",
-              "ViewState": "AgIAAA8AAAAAzczMzMwawBEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:25:09.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClaimsController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClaimsController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Controllers\\ClaimsController.cs",
-              "RelativeToolTip": "Controllers\\ClaimsController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwDgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T17:56:36.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\MainMenu.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\MainMenu.cshtml",
-              "RelativeToolTip": "Views\\Home\\MainMenu.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAwwEAAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:53:25.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Claim.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Models\\Claim.cs",
               "RelativeDocumentMoniker": "Models\\Claim.cs",
@@ -223,12 +241,11 @@
               "RelativeToolTip": "Models\\Claim.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAA2wD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T20:55:43.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:55:43.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
@@ -236,12 +253,11 @@
               "RelativeToolTip": "Views\\Home\\Login.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAE8AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T20:38:20.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:38:20.419Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -249,12 +265,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAgwB0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T21:33:44.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T21:33:44.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -262,12 +277,11 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T20:23:33.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:23:33.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -275,25 +289,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-17T20:24:25.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:24:25.194Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ClaimForm.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\ClaimForm.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\ClaimForm.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\ClaimForm.cshtml",
-              "RelativeToolTip": "Views\\Home\\ClaimForm.cshtml",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAAI4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:46:03.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Dashboard.cshtml",
@@ -301,21 +301,7 @@
               "RelativeToolTip": "Views\\Home\\Dashboard.cshtml",
               "ViewState": "AgIAAKcAAAAAAAAAAAAcwMsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:45:38.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AddUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\AddUser.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\PROG62121_POE_P3_ST10450571\\PROG6212_POE_P3_ST10450571-main\\PROG6212_POE_P3\\Views\\Home\\AddUser.cshtml",
-              "RelativeToolTip": "Views\\Home\\AddUser.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwFYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:24:35.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T18:45:38.264Z"
             },
             {
               "$type": "Document",
@@ -327,8 +313,7 @@
               "RelativeToolTip": "Views\\LecturerClaim\\Index.cshtml",
               "ViewState": "AgIAAHYAAAAAAAAAAAAkwIkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T20:57:52.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:57:52.734Z"
             },
             {
               "$type": "Document",
@@ -340,8 +325,7 @@
               "RelativeToolTip": "Services\\EncryptionHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T20:38:06.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:38:06.717Z"
             },
             {
               "$type": "Document",
@@ -353,8 +337,7 @@
               "RelativeToolTip": "Services\\ClaimStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T20:38:03.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T20:38:03.978Z"
             },
             {
               "$type": "Document",
@@ -366,8 +349,7 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAADsAAAAANDMzMzMbwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T18:44:37.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T18:44:37.105Z"
             }
           ]
         }
