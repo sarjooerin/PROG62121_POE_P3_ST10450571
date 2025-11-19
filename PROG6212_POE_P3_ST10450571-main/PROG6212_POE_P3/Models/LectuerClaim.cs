@@ -26,7 +26,7 @@ namespace PROG6212_POE_P3.Models
     public class ClaimDocuments
     {
         public string FileName { get; set; }
-        public string EncryptedContent { get; set; } // Base64 string of encrypted file
+        public string EncryptedContent { get; set; } 
         public string ContentType { get; set; }
     }
 }
