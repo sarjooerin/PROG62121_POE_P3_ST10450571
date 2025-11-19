@@ -1,4 +1,7 @@
 # **Lecturer Claim Submission System**
+## **PowerPoint:**
+[PROG6212_POE_Part_3_Feedback (1).pdf](https://github.com/user-attachments/files/23628777/PROG6212_POE_Part_3_Feedback.1.pdf)
+
 
 ## **Overview**
 
